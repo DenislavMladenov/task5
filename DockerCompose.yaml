@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - API_URL=http://localhost:8000/api
+      - DB_FILE=/app/database.db
